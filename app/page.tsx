@@ -1,69 +1,87 @@
-import Image from "next/image";
+import Link from "next/link";
+import TaskManager from "../components/TaskManager";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+      <section className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+        <div className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 px-6 py-12 text-white sm:px-10 sm:py-16">
+          <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-blue-500/20 blur-3xl" />
+          <div className="absolute -bottom-24 left-1/3 h-64 w-64 rounded-full bg-indigo-500/20 blur-3xl" />
+
+          <div className="relative max-w-3xl">
+            <span className="inline-flex rounded-full border border-blue-300/20 bg-blue-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-blue-200">
+              Week 4 • Assignment 1
+            </span>
+
+            <h1 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
+              Next.js Task Workspace
+            </h1>
+
+            <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg">
+              A professional task management interface demonstrating
+              Next.js App Router, controlled components, local storage,
+              and reducer-based state management.
+            </p>
+
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link
+                href="/dashboard"
+                className="rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+              >
+                View Dashboard
+              </Link>
+
+              <Link
+                href="/about"
+                className="rounded-xl border border-white/20 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/15"
+              >
+                About Assignment
+              </Link>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="grid gap-4 p-6 sm:grid-cols-3 sm:p-8">
+          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+            <p className="text-sm font-semibold text-blue-600">
+              P6
+            </p>
+            <h2 className="mt-2 font-bold text-slate-900">
+              Controlled Input
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-slate-500">
+              React state controls every task input.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+            <p className="text-sm font-semibold text-blue-600">
+              P7
+            </p>
+            <h2 className="mt-2 font-bold text-slate-900">
+              Local Storage
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-slate-500">
+              Tasks remain available after refreshing the browser.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+            <p className="text-sm font-semibold text-blue-600">
+              P8
+            </p>
+            <h2 className="mt-2 font-bold text-slate-900">
+              useReducer
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-slate-500">
+              Task actions use a centralized reducer.
+            </p>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <TaskManager />
+    </main>
   );
 }

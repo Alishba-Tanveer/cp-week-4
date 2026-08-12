@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Assignment Overview
 
-## Getting Started
+This assignment focuses on building a structured Next.js application while implementing important concepts from Parts P1 to P8.
 
-First, run the development server:
+The application demonstrates how Next.js routing, layouts, loading states, error boundaries, and React state-management patterns work together in a real application.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# P1 - Next.js App Router
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js App Router setup
+- File-based routing
+- Home page
+- About page
+- Dashboard page
+- Navigation between routes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# P2 - Nested Routing and Layouts
 
-## Learn More
+- Root layout for the entire application
+- Dashboard-specific nested layout
+- Shared navigation
+- Shared footer
+- Consistent application structure
 
-To learn more about Next.js, take a look at the following resources:
+# P3 - Navigation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Reusable navigation component
+- Home, About, and Dashboard routes
+- Client-side navigation using Next.js `Link`
+- Responsive navigation layout
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# P4 - Loading UI
 
-## Deploy on Vercel
+- Route-level `loading.tsx`
+- Dashboard loading state
+- Animated loading indicator
+- Demonstrates Next.js Suspense-based loading behavior
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# P5 - Error Boundary
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Dashboard-specific `error.tsx`
+- Client Component error boundary
+- Error recovery UI
+- Reset functionality
+- Errors can be tested through the dashboard error state
+
+# P6 - React State and Local Storage
+
+- Custom `useLocalStorage` hook
+- Persistent client-side state
+- Data remains available after page refresh
+- Reusable TypeScript hook
+
+# P7 - useReducer
+
+- Task state managed using `useReducer`
+- Add tasks
+- Toggle task completion
+- Edit task titles
+- Delete tasks
+- Immutable state updates
+- Centralized task actions
+
+# P8 - Controlled Components and Reusable Logic
+
+- Controlled input component
+- State-driven form values
+- Reusable `ControlledInput`
+- Helper function for editing task titles
+- Type-safe component and reducer logic
